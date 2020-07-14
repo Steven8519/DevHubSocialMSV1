@@ -13,8 +13,8 @@ public class DeveloperAggregate {
     private final int developerId;
     private final String firstName;
     private final String lastName;
-    private final List<ContactSummary> contacts;
     private final List<RecruiterSummary> recruiters;
+    private final List<ContactSummary> contacts;
     private final ServiceAddresses serviceAddresses;
 
 }

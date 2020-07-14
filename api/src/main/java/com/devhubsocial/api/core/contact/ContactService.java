@@ -15,5 +15,5 @@ public interface ContactService {
     @GetMapping(
         value    = "/contact",
         produces = "application/json")
-    List<Contact> getcontacts(@RequestParam(value = "developerId", required = true) int developerId);
+    List<Contact> getContacts(@RequestParam(value = "developerId", required = true) int developerId);
 }

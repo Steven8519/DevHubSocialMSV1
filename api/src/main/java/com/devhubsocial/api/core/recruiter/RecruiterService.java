@@ -1,4 +1,4 @@
-package com.devhubsocial.api.core.recommendation;
+package com.devhubsocial.api.core.recruiter;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,5 +16,5 @@ public interface RecruiterService {
     @GetMapping(
         value    = "/recruiter",
         produces = "application/json")
-    List<Recruiter> getrecruiters(@RequestParam(value = "developerId", required = true) int developerId);
+    List<com.devhubsocial.api.core.recruiter.Recruiter> getRecruiters(@RequestParam(value = "developerId", required = true) int developerId);
 }

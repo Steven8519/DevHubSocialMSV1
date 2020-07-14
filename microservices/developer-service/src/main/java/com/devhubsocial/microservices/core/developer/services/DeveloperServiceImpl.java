@@ -29,6 +29,6 @@ public class DeveloperServiceImpl implements DeveloperService {
         if (developerId < 1) throw new InvalidInputException("Invalid developerId: " + developerId);
 
         if (developerId == 13) throw new NotFoundException("No developer found for developerId: " + developerId);
-        return new Developer(developerId, "Sam", "Smith", "Python Developer", false, "", serviceUtil.getServiceAddress());
+        return new Developer(1, "Sam", "Smith", "Python Developer", false, "", serviceUtil.getServiceAddress());
     }
 }

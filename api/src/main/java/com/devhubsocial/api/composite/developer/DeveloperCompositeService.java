@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface DeveloperCompositeService {
 
     /**
-     * Sample usage: curl $HOST:$PORT/product-composite/1
+     * Sample usage: curl $HOST:$PORT/developer-composite/1
      *
      * @param developerId
-     * @return the composite product info, if found, else null
+     * @return the composite developer info, if found, else null
      */
     @GetMapping(
         value    = "/developer-composite/{developerId}",
