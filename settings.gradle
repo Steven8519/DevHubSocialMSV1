@@ -1,0 +1,6 @@
+include ':api'
+include ':util'
+include ':microservices:developer-service'
+include ':microservices:contact-service'
+include ':microservices:recruiter-service'
+include ':microservices:developer-composite-service'
