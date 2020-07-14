@@ -13,5 +13,5 @@ public interface DeveloperService {
     @GetMapping(
         value    = "/developer/{developerId}",
         produces = "application/json")
-    Developer getdeveloper(@PathVariable int developerId);
+    Developer getDeveloper(@PathVariable int developerId);
 }

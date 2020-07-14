@@ -23,7 +23,7 @@ public class DeveloperServiceImpl implements DeveloperService {
     }
 
     @Override
-    public Developer getdeveloper(int developerId) {
+    public Developer getDeveloper(int developerId) {
         LOG.debug("/developer return the found developer for developerId={}", developerId);
 
         if (developerId < 1) throw new InvalidInputException("Invalid developerId: " + developerId);

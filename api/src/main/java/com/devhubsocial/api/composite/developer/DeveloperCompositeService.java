@@ -14,5 +14,5 @@ public interface DeveloperCompositeService {
     @GetMapping(
         value    = "/developer-composite/{developerId}",
         produces = "application/json")
-    DeveloperAggregate getCompositeProduct(@PathVariable int developerId);
+    DeveloperAggregate getDeveloper(@PathVariable int developerId);
 }
