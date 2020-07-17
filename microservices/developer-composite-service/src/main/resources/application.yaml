@@ -1,3 +1,48 @@
+api:
+
+  common:
+    version: 1.0.0
+    title: Sample API
+    description: Description of the API...
+    termsOfServiceUrl: MINE TERMS OF SERVICE URL
+    license: License
+    licenseUrl: MY LICENSE URL
+
+    contact:
+      name: Contact
+      url: My
+      email: me@mail.com
+
+  developer-composite:
+
+    get-composite-developer:
+      description: Returns a composite view of the specified developer id
+      notes: |
+        # Normal response
+        If the requested developer id is found the method will return information regarding:
+        1. Base developer information
+        1. Contacts
+        1. Recruiters
+        1. Service Addresses\n(technical information regarding the addresses of the microservices that created the response)
+
+        # Expected partial and error responses
+        In the following cases, only a partial response be created (used to simplify testing of error conditions)
+
+        ## Developer id 113
+        200 - Ok, but no recruirers will be returned
+
+        ## Developer id 213
+        200 - Ok, but no contacts will be returned
+
+        ## Non numerical developer id
+        400 - A <b>Bad Request</b> error will be returned
+
+        ## Developer id 13
+        404 - A <b>Not Found</b> error will be returned
+
+        ## Negative developer ids
+        422 - An <b>Unprocessable Entity</b> error will be returned
+
 server.port: 8000
 
 app:
@@ -10,3 +55,24 @@ app:
   contact-service:
     host: localhost
     port: 8003
+
+logging:
+  level:
+    root: INFO
+    com.devhubsocial: DEBUG
+
+---
+spring.profiles: docker
+
+server.port: 8080
+
+app:
+  developer-service:
+    host: developer
+    port: 8080
+  recruiter-service:
+    host: recruiter
+    port: 8080
+  contact-service:
+    host: contact
+    port: 8080
