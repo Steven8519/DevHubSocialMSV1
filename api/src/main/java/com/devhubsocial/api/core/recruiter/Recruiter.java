@@ -8,12 +8,12 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class Recruiter {
-    private final int developerId;
-    private final int recruiterId;
-    private final String recruiterName;
-    private final String recruitingAgency;
-    private final int companyRating;
-    private final String serviceAddress;
+    private int developerId;
+    private int recruiterId;
+    private String recruiterName;
+    private String recruitingAgency;
+    private int companyRating;
+    private String serviceAddress;
 
     public Recruiter() {
         developerId = 0;
